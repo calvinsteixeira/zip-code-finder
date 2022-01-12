@@ -1,0 +1,159 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT STRUCTURE SETUP */
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 132, 255);
+}
+
+/* CLASSES */
+
+.text {
+  font-family: Roboto, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+main #container {
+  background-color: white;
+  width: 60%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  padding: 0 7rem 0 5rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* FORM-CONTAINER */
+
+#form-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* INPUT */
+
+#form-container #cep-input {
+  width: 70%;
+  height: 3rem;
+  border-style: initial;
+  border-bottom: 0.1rem solid rgb(0, 132, 255);
+  border-radius: 0.2rem;
+
+  color: rgb(0, 132, 255);
+  font-size: 1.6rem;
+}
+
+#form-container #cep-input:focus {
+  outline: initial;
+}
+
+#form-container #cep-input::placeholder {
+  font-size: 1rem;
+  opacity: 40%;
+  font: Roboto, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+#form-container label {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+#form-container #btn-cep {
+  margin-top: 1.5rem;
+  width: 10rem;
+  height: 2.2rem;
+  background-color: rgb(0, 132, 255);
+  border: none;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* RESPONSE CONTAINER */
+
+#response-container {
+  width: 25rem;
+  height: 38rem;
+  background-color: rgb(0, 132, 255);
+
+  border-radius: 1rem 1rem 1rem 1rem;
+
+  padding: 2rem;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#response-container h3 {
+  font-weight: 700;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 1.4rem;
+}
+
+#response-container #info {
+  width: 100%;
+  font-weight: 400;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  animation: fadeIn 0s 0.6s;
+  animation-fill-mode: backwards;
+  position: relative;
+}
+
+.run-animation:after {
+  content: '';
+  right: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 132, 255);
+
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
